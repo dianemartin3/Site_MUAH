@@ -1,0 +1,197 @@
+---
+layout: page
+active: galerie_beauty
+album-title: "Beauty"
+images:
+ - image_path: /galerie_beauty/img/JHP2017_DianeM_0110_SarahO-PhebeB_7838 copie - copie_2.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Kristina.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/171128_WilliamBibet_Laurie0541.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/70b7f158995419.5a1182e30cd13.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/5D4_1524_Oeil3 crop.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Charlie.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/chloe-n3-2w.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/chloe-n2w.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/chloe-n9.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/chloe-n10.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/6.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/10.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/11.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Vit.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/CF103628.png
+   copyright:
+ - image_path: /galerie_beauty/img/DSF0255.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Eleonora.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Delaforge.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Julia.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Paris-marieclavel-juil2017-_A7A4493 copieweb.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/JHP2017_DianeM_0110_PhebeB_7934 copie - copie_2.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/19620967_412066759195170_6167693451876919771_o.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/285A8580-Modifierweb.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/CF103823r.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/JHP2016_DianeM_0601_MathildeA-6 copie copie.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/10.20 Halsmann0862.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/10.20 Halsmann0687.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DamienMohn_CF106475_Finalweb.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/D.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/CF106258web.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/CLP2016_DianeM_0329_FannyR_0020_1.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DSC_2306.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DSC_9160v2bordurenoire--.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DSC_9391.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DSC_9312.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DSC_9248.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DSC_9192.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/2016 Chloe K VE 6762.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Chloé.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/ABP2016_DIANE M_0130_CARMEN B_1558.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/Bl.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/IMG_7227r22.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/paris-ml-_A7A3495web.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/19620268_412066769195169_4206874193620378611_o.jpg
+   copyright:
+    - image_path: /galerie_beauty/img/CF103628.png
+   copyright:
+ - image_path: /galerie_beauty/img/Anais.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/DSC_2169.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/paris-ml-_A7A3624rweb.jpg
+   copyright:
+ - image_path: /galerie_beauty/img/15292899_1776453272616302_1572315166_o.jpg
+   copyright:
+---
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+ 
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+
+
+	
+	
+	
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+					
+					
+<a href="{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="">
+<img src="{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %
+
+			</div>
+
+			
+			
+		</div><!-- END .wrapper -->
+	</section>
+
+	
+	
+<!-- jQuery -->    
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+	
+	
+	
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    
+</body></html>

@@ -1,0 +1,129 @@
+---
+layout: page
+active: galerie_divers
+header-img: "img/gallery-bg.jpg"
+album-title: "Artistique-FX"
+images:
+ - image_path: /galerie_divers/Artistique-FX/img/CLP2016_DianeM_0330_BaptisteJ_0034_1.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/CLP2016_DianeM_0523_AbigailM_0017_2.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/P1020545rweb.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/ALX_1154r.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/ALX_1157r.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/Diane HD version 2016web.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/SHD_IMG_0065_2017-02-18-10-03-04.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/P10107953.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/Celine.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/Montage.jpg
+   copyright: Make up - Elodie Fouet & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Artistique-FX/img/13518198_10209586439115193_936941855_o.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/P1010549++.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/P1020019r2.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/20170218_143533.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/montageannie.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/20170412_122239(0).jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/19400694_10211374895942671_1504328158_o.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/20170216_143910.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/20170216_115009.jpg
+   copyright:
+ - image_path: /galerie_divers/Artistique-FX/img/20170216_160559.jpg
+   copyright:
+
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

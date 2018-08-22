@@ -1,0 +1,123 @@
+---
+layout: page
+active: galerie_avantgarde
+album-title: "AvantGarde"
+images:
+ - image_path: /galerie_avantgarde/img/eleonoraseriesay.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/eleonoraseriewhat.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/eleonoraserieyou.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/eleonoraseriethink.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/modelweb.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/web.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/Solene_Angel_1.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/285A8550-Modifierweb.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/285A8742-Modifierweb.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/10.20 Halsmann0722.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/19620268_412066769195169_4206874193620378611_o.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/Anais.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/CLP2016_DianeM_0329_FannyR_0020_1.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/P1010495+.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/camille.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/Cecile.jpg
+   copyright:
+ - image_path: /galerie_avantgarde/img/CLP2016_DianeM_0329_YsabelleP_0020_1.jpg
+   copyright:
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.baseurl }}{{ image.image_path }}" class="popup"  title="{{ image.caption }}" data-caption="">
+<img src="{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary" id="{{ image.caption }}">
+							<h3>{{image.caption}}</h3>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+
+<script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+         type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+image: {
+      titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+ 
+    
+</body></html>

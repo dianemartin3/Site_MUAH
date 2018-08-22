@@ -1,0 +1,115 @@
+---
+layout: page
+active: galerie_divers
+album-title: "Evenementiel"
+images:
+ - image_path: /galerie_divers/Evenementiel/img/13575747_935297759926178_1354771809801223074_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/13568849_935294946593126_6405008574452237590_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/JURY_0624_BODYSHOW2017_9624.jpg
+   copyright: 
+ - image_path: /galerie_divers/Evenementiel/img/SHOW_0624_BODYSHOW2017_9807.jpg
+   copyright: 
+ - image_path: /galerie_divers/Evenementiel/img/13603295_935297633259524_4098012339120931737_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/13652905_935294999926454_8192666270370282795_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/Emajinarium 1.jpg
+   copyright: Maquillage des circassiens - Spectacle Emajinarium
+ - image_path: /galerie_divers/Evenementiel/img/Emajinarium 2.jpg
+   copyright: Maquillage des circassiens - Spectacle Emajinarium
+ - image_path: /galerie_divers/Evenementiel/img/13653071_935296179926336_3783098243061490125_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/13584861_935296619926292_6558279901416091580_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/13603695_935295489926405_4244143634297134202_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/13576819_935297173259570_4888756552257388214_o.jpg
+   copyright: Make up - Anne-Sophie Le Gallo et Anna Fujiwara & Coiffure - Diane Martin
+ - image_path: /galerie_divers/Evenementiel/img/P1000908.jpg
+   copyright: 
+ - image_path: /galerie_divers/Evenementiel/img/IMG_4340.jpg
+   copyright: Make up - Elodie Fouet & Coiffure - Diane Martin
+
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+</head>
+
+    <body>
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+	<br><br>
+			<h2>{{page.album-title}}</h2>
+
+
+			<!-- Gallery __-->
+			<div class="gallery masonry-gallery">
+		
+{% for image in page.images %}  		
+
+				<figure class="gallery-item">
+					<header class='gallery-icon'>
+
+<a href="{{ site.baseurl }}{{ image.image_path }}" class="popup" title="{{ image.caption }}" data-caption="{{ image.copyright }}">
+<img src="{{ site.baseurl }}{{ image.image_path }}"></a>
+						
+					</header>	
+					<figcaption class='gallery-caption'>
+						<div class="entry-summary">
+							<h3>{{image.caption}}</h3>
+						</div>
+					</figcaption>
+				</figure>
+				
+{% endfor %}
+
+			</div>
+
+		</div><!-- END .wrapper -->
+	</section>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<!-- include image popups -->
+<script src="{{ site.baseurl }}/js/jquery.magnific-popup.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+ 
+    <script type="text/javascript">
+      $(document).ready(function($) {
+        $('a.popup').magnificPopup({
+          type: 'image',
+	  gallery:{
+         enabled:true,
+         navigateByImgClick: true,
+         preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+       },
+      image: {
+         titleSrc: function(item) {
+              return item.el.attr('title') + '&nbsp;' + item.el.attr('data-caption');
+            }
+        }
+          // other options
+      });
+});
+    </script>
+
+</body></html>

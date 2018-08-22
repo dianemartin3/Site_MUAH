@@ -1,0 +1,54 @@
+---
+layout: page
+active: galerie_divers
+images:
+ - image_path: /galerie_divers/albums/Evenementiel.jpg
+   gallery-folder: /galerie_divers/Evenementiel/
+ - image_path: /galerie_divers/albums/FX.jpg
+   gallery-folder: /galerie_divers/Artistique-FX/
+ - image_path: /galerie_divers/albums/Autre.jpg
+   gallery-folder: /galerie_divers/Autres/
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+    <link rel="stylesheet" href='{{ "/css/selena.css" | prepend: site.baseurl }}'>
+</head>
+
+
+    <body class="gallery">
+ 
+	<section id="content" role="main">
+		<div class="wrapper">
+		<div style="margin-left: auto; margin-right: auto; text-align: center; padding-top: 20px;">  
+			<!-- Gallery __-->
+{% for image in page.images %}
+		     
+<a href="{{ site.baseurl }}{{ image.gallery-folder }}">
+<img style="cursor: pointer;" class="effect-selena" src="{{ site.baseurl }}{{ image.image_path }}"></a>
+{% endfor %}
+		</div>		
+		</div><!-- END .wrapper -->
+	</section>
+
+<br>
+
+<!-- jQuery -->    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script> 
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+</body></html>
