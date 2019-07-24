@@ -20,7 +20,8 @@ owner:
 # Internal nav
 nav:
   - BEAUTY: "galerie_beauty/"  
-  - FASHION: "galerie_fashion/"  
+  - FASHION: "galerie_fashion/"
+  - COMMERCIAL: "galerie_commercial/" 
   - AVANTGARDE: "galerie_avantgarde/"  
   - DIVERS: "galerie_divers/"  
   - ABOUT: "about/"
