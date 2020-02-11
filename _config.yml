@@ -1,10 +1,10 @@
 # Site settings
-title: Diane Martin MUAH
+title: Maquilleuse-Coiffeuse Paris
 header: Diane Martin
 email: "diane-martin@hotmail.fr"
 phone: "+33668367100"
 og_description: "Diane Martin, Maquilleuse &amp; Coiffeuse &agrave; Paris et r&eacute;gion parisienne. Prestations coiffures/maquillages, shootings, tournages, chignons mariages, particuliers"
-description: "Make-up Artist & Hairstylist"
+description: "Diane Martin, Maquilleuse &amp; Coiffeuse &agrave; Paris et r&eacute;gion parisienne. Prestations coiffures/maquillages, shootings, tournages, chignons mariages, particuliers"
 url: ""
 baseurl: ""
 facebook_username: "muahdianemartin"
@@ -19,14 +19,14 @@ owner:
 
 # Internal nav
 nav:
-  - BEAUTY: "galerie_beauty/"  
+  - BEAUTY: "galerie_beauty/"
   - FASHION: "galerie_fashion/"
-  - COMMERCIAL: "galerie_commercial/" 
-  - AVANTGARDE: "galerie_avantgarde/"  
-  - DIVERS: "galerie_divers/"  
+  - COMMERCIAL: "galerie_commercial/"
+  - AVANTGARDE: "galerie_avantgarde/"
+  - DIVERS: "galerie_divers/"
   - ABOUT: "about/"
-  - CONTACT: "contact/"  
- 
+  - CONTACT: "contact/"
+
 
 # All translation keys
 translations:

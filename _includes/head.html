@@ -1,8 +1,10 @@
 <head>
 
+    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description }}">
 
 	<meta property="og:title" content="{{ site.title }}" />
 	<meta property="og:type" content="website" />
@@ -13,15 +15,10 @@
 	<link rel="canonical" href="{{ page.url }}" />
 	<link rel="shortcut icon" href="{{ site.basurl }}/favicon.png?" type="image/x-icon">
 	<link rel="icon" href="{{ site.baseurl }}/favicon.png?" type="image/x-icon">
-
-    <meta name="description" content="{{ site.description }}">
-
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 
 <!-- CSS -->
-	
+
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 
@@ -42,7 +39,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<meta name="google-site-verification" content="S7zsWd_0FKotOLqvOHJeoHLWEOewRCSuXzr5yHsrj9Q" />   
+	<meta name="google-site-verification" content="S7zsWd_0FKotOLqvOHJeoHLWEOewRCSuXzr5yHsrj9Q" />
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
