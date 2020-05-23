@@ -4,6 +4,12 @@ active: galerie_divers
 videos:
  - id: 421613192
  - id: 421617186
+ - id: 421621491
+ - id: 421621560
+ - id: 421625567
+ - id: 421627660
+ - id: 421630682
+ - id: 421631010
 ---
 
 <html class="no-js" lang="en">
@@ -19,14 +25,9 @@ videos:
 		<div class="wrapper">
 		<div style="margin-left: auto; margin-right: auto; text-align: center; padding-top: 20px;">
 			<!-- Videos -->
-            {% vimeo 421613192 %}
-            {% vimeo 421617186 %}
-            {% vimeo 421621491 %}
-            {% vimeo 421621560 %}
-            {% vimeo 421625567 %}
-            {% vimeo 421627660 %}
-            {% vimeo 421630682 %}
-            {% vimeo 421631010 %}
+        {% for video in page.videos %}
+            <iframe width="500" height="281" src="http://player.vimeo.com/video/{{ video.id }}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        {% endfor %}
 		</div>
 		</div><!-- END .wrapper -->
 	</section>
