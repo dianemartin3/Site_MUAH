@@ -25,9 +25,9 @@ nav:
   - COMMERCIAL: "galerie_commercial/"
   - AVANTGARDE: "galerie_avantgarde/"
   - DIVERS: "galerie_divers/"
+  - VIDEOS: "galerie_videos/"
   - ABOUT: "about/"
   - CONTACT: "contact/"
-
 
 # All translation keys
 translations:
@@ -35,8 +35,8 @@ translations:
   permalink: "/404.html"
 
 # Server
-destination:      	 ./_site
-port:             	 4000
+destination: ./_site
+port: 4000
 
 
 # Build settings

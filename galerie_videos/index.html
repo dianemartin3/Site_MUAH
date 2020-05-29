@@ -1,0 +1,55 @@
+---
+layout: page
+active: galerie_divers
+videos:
+ - id: 421613192
+ - id: 421617186
+ - id: 421621491
+ - id: 421621560
+ - id: 421625567
+ - id: 421627660
+ - id: 421630682
+ - id: 421631010
+---
+
+<html class="no-js" lang="en">
+<head>
+	<meta content="charset=utf-8">
+    <link rel="stylesheet" href='{{ "/css/selena.css" | prepend: site.baseurl }}'>
+</head>
+
+
+    <body class="gallery">
+
+	<section id="content" role="main">
+		<div class="wrapper">
+		<div style="margin-left: auto; margin-right: auto; text-align: center; padding-top: 20px;">
+			<!-- Videos -->
+        {% for video in page.videos %}
+            <iframe width="500" height="281" src="http://player.vimeo.com/video/{{ video.id }}" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        {% endfor %}
+		</div>
+		</div><!-- END .wrapper -->
+	</section>
+
+<br>
+
+<!-- jQuery -->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/js/retina.min.js"></script>
+<!-- include Masonry -->
+<script src="{{ site.baseurl }}/js/isotope.pkgd.min.js"></script>
+<!-- include mousewheel plugins -->
+<script src="{{ site.baseurl }}/js/jquery.mousewheel.min.js"></script>
+<!-- include carousel plugins -->
+<script src="{{ site.baseurl}}/js/jquery.tinycarousel.min.js"></script>
+<!-- include svg line drawing plugin -->
+<script src="{{ site.baseurl }}/js/jquery.lazylinepainter.min.js"></script>
+<!-- include custom script -->
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<!-- Modernizr -->
+ <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+
+</body></html>
